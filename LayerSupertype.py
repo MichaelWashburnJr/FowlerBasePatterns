@@ -19,6 +19,16 @@ class Person():
 	def __str__(self):
 		return "%s %s, Age %d" % (self.first_name, self.last_name, self.age)
 
+class Professor(Person):
+	"""
+	A professor is a person.  Professors also have students and an office number.
+	"""
+	__slots__ = ('students')
+
+	def __init__(self, first_name, last_name, age, students=[]):
+		Person.__init__(self, first_name, last_name, age)
+		self.students = students
+
 class Student(Person):
 	"""
 	A Student is a person usually, but also has professors, a gpa, etc.
@@ -30,20 +40,9 @@ class Student(Person):
 		self.gpa = gpa
 		self.professors = professors
 
-	def add_prof(self, Professor p):
+	def add_prof(self, prof):
 		"""Add a professor to the students list of profs"""
 		self.professors.append(p)
-
-
-class Professor(Person):
-	"""
-	A professor is a person.  Professors also have students and an office number.
-	"""
-	__slots__ = ('students')
-
-	def __init__(self, first_name, last_name, age, students=[]):
-		Person.__init__(self, first_name, last_name, age)
-		self.students = students
 
 def main():
 	#create a student and professor
