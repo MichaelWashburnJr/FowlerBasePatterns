@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pets>
+<pet name="Spike">
+<type>dog</type>
+<weight>100.0</weight>
+<age>7</age>
+<friendly>True</friendly>
+</pet>
+<pet name="Bruno">
+<type>Snake</type>
+<weight>122.0</weight>
+<age>6</age>
+<friendly>true</friendly>
+</pet>
+</pets>
